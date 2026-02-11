@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  
+  python:
+    build: .
+      context: .
+      dockerfile: log_analyzer/analyze-app/Dockerfile
+    container_name: log_analyzer_app
+    volumes:
+      - ./src:/app
+    stdin_open: true
+    tty: true
+    
